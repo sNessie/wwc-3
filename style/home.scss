@@ -1,0 +1,53 @@
+// main: main.scss
+
+
+.section_home {
+  @include flex;
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify(center);
+  @include parallax('../img/home-bg.png');
+  @include position(relative, 0, 0);
+  @include size(100%, 100%);
+  padding: 200px;
+  &:after {
+    @include size (100%, 100%);
+    @include position(absolute,0,0);
+    background-color: rgba(0,0,0, 0.7);
+    content: "";
+    z-index: 0;
+  }
+}
+
+.home_text {
+  z-index: 1;
+  text-align: center;
+      .home_title{
+        font: 700 3rem $montserrat;
+        text-transform: uppercase;
+        color: $bgColor;
+      }
+
+      .home_description {
+        font: 400 1.4rem $roboto;
+        color: $pTxt;
+        margin: 40px 0;
+      }
+      .home_btn {
+        cursor: pointer;
+        background-color: $accentColor;
+        font:  700 1rem $montserrat;
+        border-radius: 33px;
+        border: none;
+        color: $bgColor;
+        text-transform: uppercase;
+        padding: 20px 30px;
+        text-shadow: 0px 1px 1px rgba(0,0,0, 0.7);
+        @include transition(all 0.5s ease-in);
+        &:hover {
+          background-color: $accentColor;
+          color: $bgColor;
+          @include scale-transform;
+          }
+        }
+}

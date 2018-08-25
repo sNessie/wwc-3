@@ -1,0 +1,87 @@
+// main: main.scss
+
+.section_relax{
+        @include flex;
+        @include flex-direction(column);
+        @include size(100%, 100%);
+        @include respond-to(tablet){
+              @include flex-direction(row);
+              @include align-items(center);
+              @include justify(center);
+              }
+  .relax_images{
+        display: none;
+        @include respond-to(desktop) {
+              background: $gearColor;
+              @include flex;
+              @include justify(flex-end);
+              margin-right: -251px;
+              padding: 50px;
+            }
+  }
+
+  .relax_section{
+    @include flex;
+    @include align-self(stretch);
+    @include align-items(center);
+    @include parallax('../img/bg-relax.png');
+    @include position(relative, 0, 0);
+    padding: 0 100px;
+
+    &:after {
+        @include size(100%, 100%);
+      @include position(absolute,0,0);
+      background-color: rgba(0,0,0, 0.7);
+      content: "";
+      z-index: 0;
+    }
+  }
+
+  .relax-text{
+      z-index: 1;
+        .relax_title {
+              @include position(relative, 0, 0);
+              font: 700 2.5rem $montserrat;
+              color:  $bgColor;
+              margin-bottom: 2rem;
+              text-transform: uppercase;
+                .relax_title--green {
+                      color:  $accentColor;
+                      }
+              }
+
+        .relax_description{
+          @include position(relative, 0, 0);
+          width: 60%;
+          font: 400 1rem $roboto;
+          color: $pTxt;
+        }
+
+  .relax_list{
+        padding: 20px 0;
+          .relax_list-item{
+                @include position(relative, 0, 0);
+                background: url("../img/mark-list.svg") left center no-repeat;
+                padding: 10px 0 10px 44px;
+                font: 400 1rem $roboto;
+                color: $pTxt;
+              }
+  }
+
+  .relax_btn{
+    @include position(relative, 0, 0);
+    background-color:  #7cc576;
+    border-radius: 33px;
+    padding: 22px 36px;
+    border:none;
+    text-transform: uppercase;
+    color: $bgColor;
+    font: 700 1rem $montserrat;
+    @include transition(all 0.5s ease-in);
+        &:hover {
+          background-color: $bgColor;
+          color: $accentColor;
+          }
+  }
+}
+}

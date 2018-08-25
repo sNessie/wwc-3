@@ -1,0 +1,58 @@
+// main: main.scss
+
+.section_about{
+  @include flex;
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify(center);
+  text-align: center;
+  max-width: $maxWidth;
+  margin: 100px auto;
+  .about_title {
+      font: 700 3rem $montserrat;
+      text-transform: uppercase;
+      line-height: 5.3rem;
+      color: $titleTxt;
+  }
+
+  .about_description{
+      font: 400 1.4rem $roboto;
+      color: $baseTxt;
+      margin-bottom: 100px;
+  }
+
+  .about_boxes{
+    @include flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify(center);
+        @include respond-to(desktop) {
+              @include flex-direction(row);
+              max-height: 100%;
+              overflow: visible;
+              @include flex-basic(auto);
+              }
+    .about_box{
+      @include flex;
+      @include flex-direction(column);
+      @include align-items(center);
+      @include justify(center);
+          .box_img{
+            margin-bottom: 2rem;
+          }
+
+          .box_title{
+            font: 700 1.125rem $montserrat;
+            color: $titleTxt;
+            text-transform: uppercase;
+            line-height: 1.3125rem;
+            margin-bottom: 1rem;
+          }
+
+          .box_description{
+            font: 400 0.875rem $roboto;
+            color:  $baseTxt;
+          }
+    }
+  }
+}

@@ -1,0 +1,176 @@
+// main: main.scss
+
+.section_contact {
+  background: $accentColor;
+  @include flex;
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify(center);
+  padding: 70px 0;
+  margin: 0 auto;
+  text-align: center;
+        .contact_title {
+          font: 700 2rem $montserrat;
+          color:  $bgColor;
+          text-transform: uppercase;
+          max-width: $maxWidth;
+        }
+
+        .contact_btn {
+          font: 700 1rem $montserrat;
+          margin-top: 28px;
+          border: 3px solid $bgColor;
+          color: $bgColor;
+          background-color:  $accentColor;
+          text-transform: uppercase;
+          padding:  17px 29px;
+          border-radius: 10px;
+          cursor: pointer;
+          @include transition(all 0.5s ease-in);
+          &:hover{
+            background-color: $bgColor;
+            color: $accentColor;
+
+          }
+        }
+}
+
+.section_icons {
+  @include flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include align-items(center);
+  @include justify(center);
+  max-width: $maxWidth;
+  margin: 60px auto;
+  .icons-logo {
+      margin-right: 40px;
+      margin-bottom: 40px;
+  }
+}
+
+.section_footer {
+  width: 100%;
+  background: $titleTxt;
+
+
+  .container-footer{
+    @include flex;
+    @include flex-direction(column);
+    @include justify(space-between);
+    @include flex-wrap(wrap);
+    text-align: left;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    color: $footerTxt;
+    @include respond-to(tablet) {
+          @include flex-direction(row);
+    }
+    .footer_title {
+      font: 700 1rem $montserrat;
+      text-transform: uppercase;
+      padding: 25px 0;
+
+    }
+    .footer_contact {
+      width:33%;
+        .contact_adress, .contact_phone, .contact_mail {
+        font: 400 0.85rem $montserrat;
+        padding: 0 0 15px 38px;
+        line-height: 1rem;
+
+        }
+        .contact_adress{
+
+        background: url(../img/location-icon.svg) left top no-repeat;
+        }
+        .contact_phone{
+          line-height: 1.6rem;
+        background: url(../img/phone-icon.svg) left top no-repeat;
+        }
+        .contact_mail{
+
+        background: url(../img/email-icon.svg) left top no-repeat;
+        a {
+          text-decoration: none;
+          color: $footerTxt;
+          &:hover{
+            color: $accentColor;
+          }
+        }
+        }
+        }
+  .footer_posts{
+    width:33%;
+    font: 400 0.85rem $montserrat;
+    .posts_list{
+    .posts_list-item {
+      padding: 0 0 30px 30px;
+      line-height: 1.4rem;
+    }
+      .news-icon{
+        background: url(../img/news-icon.svg) left top no-repeat;
+      }
+      .photo-icon{
+        background: url(../img/photo-icon.svg) left top no-repeat;
+      }
+      .media-icon{
+        background: url(../img/media-icon.svg) left top no-repeat;
+      }
+
+  }
+        }
+  .footer_tweet{
+    width:33%;
+    font: 400 0.85rem $montserrat;
+    .tweet_list {
+      .tweet_list-item {
+        padding: 0 0 30px 30px;
+        .tweet_list-link {
+          text-decoration: none;
+          color: $footerTxt;
+          &:hover{
+            color: $accentColor;
+          }
+        }
+        .tweet_list-date{
+          font-size: 0.7rem;
+        }
+        }
+        .twitter-icon{
+            background: url(../img/twitter-icon.svg) left top no-repeat;
+        }
+      }
+        }
+        }
+}
+
+.page_footer{
+  @include flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include align-items(center);
+  @include justify(flex-start);
+  max-width: $maxWidth;
+  margin: 42px auto;
+  .footer_copyright{
+    font: 400 0.85rem $montserrat;
+    color: $copyrightColor;
+  }
+  .footer_social {
+    @include flex;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include align-items(center);
+    @include justify(center);
+      @include respond-to(tablet) {
+            margin-left: 20%;
+            }
+    .footer_social-item{
+      .footer_social-icon {
+        margin-right: 10px;
+
+      }
+    }
+  }
+}

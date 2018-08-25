@@ -1,0 +1,93 @@
+// main: main.scss
+
+.section_portfolio {
+  padding: 100px 0;
+  @include flex;
+  @include flex-direction(column);
+  @include align-items(center);
+  @include position(relative,0,0);
+
+  .portfolio_title {
+    font: 700 2.5rem $montserrat;
+    color: $titleTxt;
+    letter-spacing: -0.075rem;
+    text-transform: uppercase;
+  }
+
+  .portfolio_description {
+    font: 400 1.25rem $montserrat;
+    color: $baseTxt;
+    line-height: 1.5rem;
+    margin-top: 10px;
+  }
+
+
+  .portolio_img {
+    display: none;
+    @include respond-to(desktop) {
+      display: block;
+      float: right;
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .article_text {
+    width: 100%;
+      @include respond-to(desktop) {
+          width: 50%;
+          }
+
+    .article_title {
+      margin-top: 86px;
+      font: 700 1.125rem $montserrat;
+      line-height: 1.3125rem;
+      text-transform: uppercase;
+    }
+
+    .article_description {
+      margin-top: 2.4rem;
+      font: 400 1rem $roboto;
+      line-height: 1.5rem;
+      color: $baseTxt;
+      margin-bottom: 2.5rem;
+    }
+
+    .article_link{
+      text-transform: uppercase;
+      color: $accentColor;
+      text-decoration: none;
+      font: 700 1rem $montserrat;
+      letter-spacing: -0.03125rem;
+
+    }
+
+    .article_list {
+      .article_list-item {
+        @include flex;
+        @include flex-direction(row);
+        @include align-items(center);
+        padding: 1rem;
+        .article_row_img {
+          @include flex;
+          @include align-items(center);
+          @include justify(center);
+          @include size(67px, 67px);
+          padding: 20px;
+          border-radius: 50%;
+          border: 3px solid $blackColor;
+          margin-right: 20px;
+        }
+
+        .article_list-title {
+          font: 700 1.125rem $montserrat;
+        }
+
+        .article_list-description {
+          font: 400 1rem $montserrat;
+          color: $baseTxt;
+        }
+      }
+    }
+  }
+}

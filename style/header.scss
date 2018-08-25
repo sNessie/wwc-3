@@ -1,0 +1,111 @@
+// main: main.scss
+
+.page_header-fixed{
+  @include position(fixed, 0, 0);
+  background: $bgColor;
+  width: 100%;
+  z-index: 10;
+}
+
+.page_navbar {
+  @include flex;
+  @include flex-wrap(wrap);
+  @include justify(justify);
+  @include align-items(center);
+  padding: 20px 15px;
+  max-width: $maxWidth;
+  margin: 0 auto;
+}
+
+.navbar_hamburger {
+  @include size(35px,35px);
+  @include position(relative);
+  display: block;
+  cursor: pointer;
+  @include respond-to(desktop) {
+    display: none;
+  }
+      .hamburger_icon {
+            @include size (3px, 100%);
+            background: $baseTxt;
+            border-radius: 5px;
+            }
+
+      span:nth-child(1) {
+        @include position(absolute, 0, 0);
+        @include transition(all 0.5s ease-in);
+      }
+
+      span:nth-child(2) {
+        @include position(absolute, 12px, 0);
+        @include transition(all 0.5s ease-in);
+      }
+
+      span:nth-child(3) {
+        @include position(absolute, 25px, 0);
+        @include transition(all 0.5s ease-in);
+      }
+
+      &-open{
+             span:nth-child(1) {
+                  top: 18px;
+                  @include transform-rotate(135deg);
+                  @include transition(all 0.5s ease-in);
+
+                    }
+
+              span:nth-child(2) {
+                  opacity: 0;
+                  left: -60px;
+                  @include transition(all 0.5s ease-in);
+                }
+
+                span:nth-child(3) {
+                    top: 18px;
+                    @include transform-rotate(-135deg);
+                    @include transition(all 0.5s ease-in);
+                  }
+      }
+
+}
+
+.navbar_menu {
+    overflow: hidden;
+    max-height:0;
+    @include transition(all 0.5s ease-in);
+    @include flex;
+    @include justify(justify);
+    @include flex-direction(column);
+    @include flex-basic(100%);
+    @include respond-to(desktop) {
+    @include flex-direction(row);
+        max-height: 100%;
+        overflow: visible;
+        @include flex-basic(auto);
+
+  }
+}
+
+.navbar_menu-open {
+  max-height: 200px;
+}
+
+.menu_link {
+  border: none;
+  background: $bgColor;
+  font: 400 1rem $montserrat;
+  color: $baseTxt;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 1.66rem;
+  @include respond-to(desktop) {
+    padding-left: 20px;
+  }
+  &:hover {
+    color: $accentColor;
+    border: none;
+  }
+  &-active{
+    color: $accentColor;
+  }
+}

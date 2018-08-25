@@ -1,0 +1,140 @@
+// main: main.scss
+$montserrat: 'Montserrat', sans-serif;
+$roboto: 'Roboto Slab', serif;
+$baseTxt: #777;
+$pTxt: #ccc;
+$titleTxt: #222;
+$accentColor: #7cc576;
+$bgColor: #fff;
+$footerTxt: #ececec;
+$gearColor:  #e9e9e9;
+$imgColor: #f9f9f9;
+$copyrightColor: #555;
+$blackColor: #000;
+$fontSize: 62.5%;
+$maxWidth: 970px;
+
+
+// MEDIA
+$break-small: 600px;
+$break-large: 992px;
+$break-big: 1200px;
+@mixin respond-to($media) {
+  @if $media == tablet {
+    @media only screen and (min-width: $break-small) {
+      @content;
+    }
+  } @else
+  if $media == desktop {
+    @media only screen and (min-width: $break-large) {
+      @content;
+    }
+  } @else
+  if $media == full {
+    @media only screen and (min-width: $break-big) {
+      @content;
+    }
+  }
+}
+// MIXIN
+
+@mixin position($position, $top: 0, $left:0) {
+  position: $position;
+  top: $top;
+  left: $left;
+}
+@mixin position-right($position, $top: 0, $right:0) {
+  position: $position;
+  top: $top;
+  right: $right;
+}
+@mixin flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+  -moz-flex-wrap: $wrap;
+  -ms-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+@mixin flex-direction($value) {
+	@if $value == row-reverse {
+		  -webkit-box-direction: reverse;
+		  -webkit-box-orient: horizontal;
+	} @else if $value == column {
+		  -webkit-box-direction: normal;
+		  -webkit-box-orient: vertical;
+	} @else if $value == column-reverse {
+	  	-webkit-box-direction: reverse;
+		  -webkit-box-orient: vertical;
+	} @else {
+		  -webkit-box-direction: normal;
+		  -webkit-box-orient: horizontal;
+	}
+	  -webkit-flex-direction: $value;
+    -moz-flex-direction: $value;
+    -ms-flex-direction: $value;
+	  flex-direction: $value;
+}
+
+@mixin flex-basic($size){
+  -ms-flex-preferred-size: $size;
+        flex-basis: $size;
+}
+
+@mixin size($height, $width){
+  width: $width;
+  height: $height;
+}
+
+@mixin justify($value) {
+    -webkit-box-pack: $value;
+    -ms-flex-pack: $value;
+    @if $value == justify {
+        justify-content: space-between;
+      } @else{
+    justify-content: $value;
+  }
+}
+
+@mixin align-items($align){
+  -webkit-box-align: $align;
+  -ms-flex-align: $align;
+  align-items: $align;
+}
+
+@mixin transition ($val...) {
+    -webkit-transition: $val;
+    -o-transition: $val;
+    transition: $val;
+}
+
+@mixin scale-transform($size:1.25) {
+    -ms-transform: scale($size, $size);
+    -webkit-transform: scale($size, $size);
+    transform: scale($size, $size);
+  }
+  @mixin transform-rotate($deg) {
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    transform: rotate($deg);
+  }
+
+@mixin parallax($url-bg) {
+  background: url($url-bg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin align-self($self){
+  -ms-flex-item-align: $self;
+  -ms-grid-row-align: $self;
+  align-self: $self;
+}
