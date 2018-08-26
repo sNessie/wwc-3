@@ -7,7 +7,7 @@
   @include justify(center);
   text-align: center;
   max-width: $maxWidth;
-  margin: 100px auto;
+  margin: 5rem auto;
   .about_title {
       font: 700 3rem $montserrat;
       text-transform: uppercase;
@@ -18,7 +18,7 @@
   .about_description{
       font: 400 1.4rem $roboto;
       color: $baseTxt;
-      margin-bottom: 100px;
+      margin-bottom: 5rem;
   }
 
   .about_boxes{

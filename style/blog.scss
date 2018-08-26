@@ -6,7 +6,7 @@
   @include align-items(center);
   @include justify(center);
   text-align: center;
-  padding-top: 100px;
+  padding-top: 5rem;
   max-width: $maxWidth;
   margin: 0 auto;
   .blog_title{
@@ -18,7 +18,7 @@
   .blog_description{
     font: 400 1.4rem $roboto;
     color: $baseTxt;
-    margin-bottom: 100px;
+    margin-bottom: 5rem;
   }
   .client_quote{
     @include flex;
@@ -59,7 +59,7 @@
         font: 400 1.375rem $roboto;
         color: $baseTxt;
         line-height: 1.75rem;
-        margin-bottom: 12px;
+        margin-bottom: 1rem;
       }
       .client_quote--author{
         font: 400 1.125rem $roboto;
@@ -68,7 +68,7 @@
       }
     }
     .client_icon{
-      @include size(227px, 227px);
+      @include size(15rem, 15rem);
       background: $imgColor;
       border-radius: 50%;
     }

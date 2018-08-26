@@ -6,9 +6,10 @@
   @include align-items(center);
   @include justify(center);
   text-align: center;
-  max-width: $maxWidth;
+  width: 100%;
   margin: 0 auto;
-  background: #f9f9f9;
+  background: $imgColor;
+
       .culture_title{
         font: 700 2.85rem $montserrat;
         text-transform: uppercase;
@@ -21,6 +22,7 @@
         margin-bottom: 100px;
       }
       .culture_container{
+        width: $maxWidth;
         @include flex;
         @include flex-direction(column);
         @include align-items(center);
@@ -36,22 +38,22 @@
             @include align-items(center);
             position: relative;
               @include respond-to(desktop) {
-            &:nth-child(1), &:nth-child(2){
-              &:after {
-              content:"";
-              @include size(2px, 100px);
-              @include position(absolute,40px,240px);
-              background-color: $baseTxt;
+                &:nth-child(1), &:nth-child(2){
+                  &:after {
+                  content:"";
+                  @include size(0.125rem, 6.25rem);
+                  @include position(absolute,40px,240px);
+                  background-color: $baseTxt;
+                }
             }
-            }
-            &:nth-child(2), &:nth-child(3){
-              &:before {
-                content:"";
-                @include size(2px, 100px);
-                @include position(absolute,40px,-40px);
-                background-color: $baseTxt;
-              }
-            }
+                &:nth-child(2), &:nth-child(3){
+                  &:before {
+                    content:"";
+                    @include size(0.125rem, 6.25rem);
+                    @include position(absolute,40px,-40px);
+                    background-color: $baseTxt;
+                  }
+                }
           }
 
 
@@ -59,10 +61,10 @@
             @include flex;
             @include align-items(center);
             @include justify(center);
-            @include size(85px, 85px);
+            @include size(5.3rem, 5.3rem);
             border-radius: 50%;
             border: 3px solid $baseTxt;
-            margin-bottom: 30px;
+            margin-bottom: 1.875rem;
             }
           .box_title{
             font: 700 1.125rem $montserrat;
@@ -72,7 +74,7 @@
           .box_description{
             font: 400 1rem $montserrat;
             color: $baseTxt;
-            margin: 0 28px 50px 28px;
+            margin: 0 1.5rem 3rem;
           }
       }
       }

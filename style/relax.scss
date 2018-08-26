@@ -16,7 +16,7 @@
               @include flex;
               @include justify(flex-end);
               margin-right: -251px;
-              padding: 50px;
+              padding: 3rem;
             }
   }
 
@@ -26,10 +26,12 @@
     @include align-items(center);
     @include parallax('../img/bg-relax.png');
     @include position(relative, 0, 0);
-    padding: 0 100px;
-
+    padding: 2rem 1rem;
+      @include respond-to(desktop) {
+        padding: 0 5rem;
+}
     &:after {
-        @include size(100%, 100%);
+      @include size(100%, 100%);
       @include position(absolute,0,0);
       background-color: rgba(0,0,0, 0.7);
       content: "";
@@ -58,7 +60,7 @@
         }
 
   .relax_list{
-        padding: 20px 0;
+        padding: 1rem 0;
           .relax_list-item{
                 @include position(relative, 0, 0);
                 background: url("../img/mark-list.svg") left center no-repeat;
@@ -71,8 +73,8 @@
   .relax_btn{
     @include position(relative, 0, 0);
     background-color:  #7cc576;
-    border-radius: 33px;
-    padding: 22px 36px;
+    border-radius: 2rem;
+    padding: 1.5rem 2rem;
     border:none;
     text-transform: uppercase;
     color: $bgColor;

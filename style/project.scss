@@ -1,12 +1,11 @@
 // main: main.scss
 
 .section_portfolio {
-  padding: 100px 0;
+  padding: 5rem 0;
   @include flex;
   @include flex-direction(column);
   @include align-items(center);
   @include position(relative,0,0);
-
   .portfolio_title {
     font: 700 2.5rem $montserrat;
     color: $titleTxt;
@@ -18,7 +17,7 @@
     font: 400 1.25rem $montserrat;
     color: $baseTxt;
     line-height: 1.5rem;
-    margin-top: 10px;
+    margin-top: 1rem;
   }
 
 
@@ -26,20 +25,19 @@
     display: none;
     @include respond-to(desktop) {
       display: block;
-      float: right;
-      position: absolute;
-      right: 0;
+      @include position-right(absolute,center, 0)
     }
   }
 
   .article_text {
     width: 100%;
+    padding: 1rem;
       @include respond-to(desktop) {
           width: 50%;
           }
 
     .article_title {
-      margin-top: 86px;
+      margin-top: 4rem;
       font: 700 1.125rem $montserrat;
       line-height: 1.3125rem;
       text-transform: uppercase;
@@ -73,10 +71,10 @@
           @include align-items(center);
           @include justify(center);
           @include size(67px, 67px);
-          padding: 20px;
+          padding: 1rem;
           border-radius: 50%;
           border: 3px solid $blackColor;
-          margin-right: 20px;
+          margin-right: 1rem;
         }
 
         .article_list-title {

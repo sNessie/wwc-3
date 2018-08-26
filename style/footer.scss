@@ -6,7 +6,7 @@
   @include flex-direction(column);
   @include align-items(center);
   @include justify(center);
-  padding: 70px 0;
+  padding: 5rem 0;
   margin: 0 auto;
   text-align: center;
         .contact_title {
@@ -18,13 +18,13 @@
 
         .contact_btn {
           font: 700 1rem $montserrat;
-          margin-top: 28px;
+          margin-top: 2rem;
           border: 3px solid $bgColor;
           color: $bgColor;
           background-color:  $accentColor;
           text-transform: uppercase;
-          padding:  17px 29px;
-          border-radius: 10px;
+          padding:  1rem 2rem;
+          border-radius: 0.5rem;
           cursor: pointer;
           @include transition(all 0.5s ease-in);
           &:hover{
@@ -42,10 +42,9 @@
   @include align-items(center);
   @include justify(center);
   max-width: $maxWidth;
-  margin: 60px auto;
+  margin: 3.7rem auto;
   .icons-logo {
-      margin-right: 40px;
-      margin-bottom: 40px;
+    margin: 0 2.5rem 0;
   }
 }
 
@@ -69,24 +68,23 @@
     .footer_title {
       font: 700 1rem $montserrat;
       text-transform: uppercase;
-      padding: 25px 0;
+      padding: 2rem 0;
 
     }
     .footer_contact {
       width:33%;
         .contact_adress, .contact_phone, .contact_mail {
         font: 400 0.85rem $montserrat;
-        padding: 0 0 15px 38px;
+        padding: 0 0 1rem 2rem;
         line-height: 1rem;
 
         }
         .contact_adress{
-
         background: url(../img/location-icon.svg) left top no-repeat;
         }
         .contact_phone{
           line-height: 1.6rem;
-        background: url(../img/phone-icon.svg) left top no-repeat;
+          background: url(../img/phone-icon.svg) left top no-repeat;
         }
         .contact_mail{
 
@@ -125,7 +123,7 @@
     font: 400 0.85rem $montserrat;
     .tweet_list {
       .tweet_list-item {
-        padding: 0 0 30px 30px;
+        padding: 0 0 2rem 2rem;
         .tweet_list-link {
           text-decoration: none;
           color: $footerTxt;
@@ -152,7 +150,7 @@
   @include align-items(center);
   @include justify(flex-start);
   max-width: $maxWidth;
-  margin: 42px auto;
+  margin: 2.5rem auto;
   .footer_copyright{
     font: 400 0.85rem $montserrat;
     color: $copyrightColor;
@@ -168,7 +166,7 @@
             }
     .footer_social-item{
       .footer_social-icon {
-        margin-right: 10px;
+        margin-right: 1rem;
 
       }
     }
