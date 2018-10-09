@@ -22,15 +22,23 @@
   z-index: 1;
   text-align: center;
       .home_title{
-        font: 700 3rem $montserrat;
+        font: 700 2rem $montserrat;
         text-transform: uppercase;
         color: $bgColor;
+        padding: 0 10%;
+        @include respond-to(desktop) {
+          font: 700 3rem $montserrat;
+        }
       }
 
       .home_description {
-        font: 400 1.4rem $roboto;
+        font: 400 1rem $roboto;
         color: $pTxt;
         margin: 2rem 0;
+        padding: 10%;
+        @include respond-to(desktop) {
+          font: 400 1.4rem $roboto;
+        }
       }
       .home_btn {
         cursor: pointer;

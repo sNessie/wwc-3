@@ -38,12 +38,15 @@ ul, menu, dir {
   -webkit-margin-end: 0px;
   -webkit-padding-start: 0px; }
 
+body, html {
+  width: 100%; }
+
 .page_header-fixed {
   position: fixed;
   top: 0;
   left: 0;
   background: #fff;
-  width: 100%;
+  width: 90%;
   z-index: 3; }
 
 .page_navbar {
@@ -241,13 +244,21 @@ body {
   z-index: 1;
   text-align: center; }
   .home_text .home_title {
-    font: 700 3rem "Montserrat", sans-serif;
+    font: 700 2rem "Montserrat", sans-serif;
     text-transform: uppercase;
-    color: #fff; }
+    color: #fff;
+    padding: 0 10%; }
+    @media only screen and (min-width: 992px) {
+      .home_text .home_title {
+        font: 700 3rem "Montserrat", sans-serif; } }
   .home_text .home_description {
-    font: 400 1.4rem "Roboto Slab", serif;
+    font: 400 1rem "Roboto Slab", serif;
     color: #ccc;
-    margin: 2rem 0; }
+    margin: 2rem 0;
+    padding: 10%; }
+    @media only screen and (min-width: 992px) {
+      .home_text .home_description {
+        font: 400 1.4rem "Roboto Slab", serif; } }
   .home_text .home_btn {
     cursor: pointer;
     background-color: #7cc576;
@@ -290,14 +301,21 @@ body {
   max-width: 970px;
   margin: 5rem auto; }
   .section_about .about_title {
-    font: 700 3rem "Montserrat", sans-serif;
+    font: 700 2rem "Montserrat", sans-serif;
     text-transform: uppercase;
     line-height: 5.3rem;
     color: #222; }
+    @media only screen and (min-width: 992px) {
+      .section_about .about_title {
+        font: 700 3rem "Montserrat", sans-serif; } }
   .section_about .about_description {
-    font: 400 1.4rem "Roboto Slab", serif;
+    font: 400 1rem "Roboto Slab", serif;
     color: #777;
-    margin-bottom: 5rem; }
+    margin-bottom: 5rem;
+    padding: 0 15%; }
+    @media only screen and (min-width: 992px) {
+      .section_about .about_description {
+        font: 400 1.4rem "Roboto Slab", serif; } }
   .section_about .about_boxes {
     display: -webkit-box;
     display: -webkit-flex;
@@ -345,7 +363,8 @@ body {
       align-items: center;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center; }
+      justify-content: center;
+      padding: 10% 15%; }
       .section_about .about_boxes .about_box .box_img {
         margin-bottom: 2rem; }
       .section_about .about_boxes .about_box .box_title {
@@ -501,15 +520,19 @@ body {
   top: 0;
   left: 0; }
   .section_portfolio .portfolio_title {
-    font: 700 2.5rem "Montserrat", sans-serif;
+    font: 700 2rem "Montserrat", sans-serif;
     color: #222;
     letter-spacing: -0.075rem;
     text-transform: uppercase; }
+    @media only screen and (min-width: 992px) {
+      .section_portfolio .portfolio_title {
+        font: 700 3rem "Montserrat", sans-serif; } }
   .section_portfolio .portfolio_description {
     font: 400 1.25rem "Montserrat", sans-serif;
     color: #777;
     line-height: 1.5rem;
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    width: 90%; }
   .section_portfolio .portolio_img {
     display: none; }
     @media only screen and (min-width: 992px) {
@@ -519,7 +542,7 @@ body {
         top: center;
         right: 0; } }
   .section_portfolio .article_text {
-    width: 100%;
+    width: 90%;
     padding: 1rem; }
     @media only screen and (min-width: 992px) {
       .section_portfolio .article_text {
@@ -604,10 +627,13 @@ body {
   margin: 0 auto;
   background: #f9f9f9; }
   .section_culture .culture_title {
-    font: 700 2.85rem "Montserrat", sans-serif;
+    font: 700 1.5rem "Montserrat", sans-serif;
     text-transform: uppercase;
     line-height: 5.3rem;
     color: #222; }
+    @media only screen and (min-width: 992px) {
+      .section_culture .culture_title {
+        font: 700 3rem "Montserrat", sans-serif; } }
   .section_culture .culture_description {
     font: 400 1.4rem "Roboto Slab", serif;
     color: #777;
@@ -702,7 +728,8 @@ body {
       .section_culture .culture_container .culture_box .box_description {
         font: 400 1rem "Montserrat", sans-serif;
         color: #777;
-        margin: 0 1.5rem 3rem; }
+        margin: 0 1.5rem 3rem;
+        width: 80%; }
 
 .section_blog {
   display: -webkit-box;

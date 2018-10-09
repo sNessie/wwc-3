@@ -11,10 +11,13 @@
   background: $imgColor;
 
       .culture_title{
-        font: 700 2.85rem $montserrat;
+        font: 700 1.5rem $montserrat;
         text-transform: uppercase;
         line-height: 5.3rem;
         color: $titleTxt;
+        @include respond-to(desktop) {
+          font: 700 3rem $montserrat;
+        }
       }
       .culture_description{
         font: 400 1.4rem $roboto;
@@ -75,6 +78,7 @@
             font: 400 1rem $montserrat;
             color: $baseTxt;
             margin: 0 1.5rem 3rem;
+            width: 80%;
           }
       }
       }
