@@ -22,7 +22,7 @@
         margin-bottom: 100px;
       }
       .culture_container{
-        width: $maxWidth;
+        max-width: $maxWidth;
         @include flex;
         @include flex-direction(column);
         @include align-items(center);
@@ -78,5 +78,4 @@
           }
       }
       }
-
 }

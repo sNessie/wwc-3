@@ -68,9 +68,12 @@
       }
     }
     .client_icon{
-      @include size(15rem, 15rem);
-      background: $imgColor;
-      border-radius: 50%;
+      display: none;
+      @include respond-to(desktop) {
+        @include size(15rem, 15rem);
+        background: $imgColor;
+        border-radius: 50%; }
+      
     }
   }
 }

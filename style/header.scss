@@ -1,5 +1,3 @@
-// main: main.scss
-
 .page_header-fixed{
   @include position(fixed, 0, 0);
   background: $bgColor;
